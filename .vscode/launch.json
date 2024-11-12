@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [
+                "${input:example}"
+            ],
+            "cwd": "${workspaceFolder:swift_arch}/swift-executable",
+            "name": "0",
+            "program": "${workspaceFolder:swift_arch}/swift-executable/.build/debug/swift-executable",
+            "preLaunchTask": "swift: Build Debug swift-executable (swift-executable)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift_arch}/swift-executable",
+            "name": "Debug swift-executable (swift-executable)",
+            "program": "${workspaceFolder:swift_arch}/swift-executable/.build/debug/swift-executable",
+            "preLaunchTask": "swift: Build Debug swift-executable (swift-executable)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift_arch}/swift-executable",
+            "name": "Release swift-executable (swift-executable)",
+            "program": "${workspaceFolder:swift_arch}/swift-executable/.build/release/swift-executable",
+            "preLaunchTask": "swift: Build Release swift-executable (swift-executable)"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "example",
+            "type": "promptString",
+            "default": "0",
+            "description": "number of example to run"
+        }
+    ]
+}
